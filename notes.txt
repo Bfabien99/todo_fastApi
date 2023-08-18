@@ -1,2 +1,3 @@
-> pip install fastapi
-> pip install "uvicorn[standard]"
+> pip install fastapi : install fastapi
+> pip install "uvicorn[standard]" : install uvicorn as server
+> uvicorn main:app --reload : run the uvicorn server
