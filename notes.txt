@@ -1,3 +1,5 @@
 > pip install fastapi : install fastapi
 > pip install "uvicorn[standard]" : install uvicorn as server
 > uvicorn main:app --reload : run the uvicorn server
+> 127.0.0.1:8000/docs : documentation of your api Swagger UI
+> 127.0.0.1:8000/redoc : documentation of your api
