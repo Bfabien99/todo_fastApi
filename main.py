@@ -29,12 +29,17 @@ async def create_todos(todo: Todo):
     return {"message": "Todo has been added!"}
 
 # # update a Todo
-# @app.get('/')
-# async def update_todo():
+@app.put('/todos/{todo_id}')
+async def update_todo(todo_id: int, item: Todo):
+    for todo in todos:
+        if todo.id == todo_id:
+            todo.description = item.description
+            return {"message": "Todo has been updated!"}
+    return {"message":"no todo found!"}
     
 # # delete a Todo
 @app.delete('/todos/{todo_id}')
-async def get_delete(todo_id: int):
+async def delete_todo(todo_id: int):
     for todo in todos:
         if todo.id == todo_id:
             todos.remove(todo)
